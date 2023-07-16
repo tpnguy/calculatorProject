@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="calculator.js" defer></script>
+    
     <link rel="stylesheet" href="calculator.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,8 +12,10 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
       rel="stylesheet"
     />
+    <script src="calculator.js" defer></script>
   </head>
   <body>
+    
     <div class="calculator">
       <div class="calccontainer">
         <div class="outputcontainer">
@@ -26,28 +28,28 @@
             <button id="delete">DELETE</button>
           </div>
           <div class="topRow">
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>&#247;</button>
+            <button id="number">7</button>
+            <button id="number">8</button>
+            <button id="number">9</button>
+            <button id="divide">&#247;</button>
           </div>
           <div class="midRow">
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>&#215;</button>
+            <button id="number">4</button>
+            <button id="number">5</button>
+            <button id="number">6</button>
+            <button id="multiply">&#215;</button>
           </div>
           <div class="bottomRow">
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>&#8722;</button>
+            <button id="number">1</button>
+            <button id="number">2</button>
+            <button id="number">3</button>
+            <button id="subtract">&#8722;</button>
           </div>
           <div class="lowestRow">
-            <button>.</button>
-            <button>0</button>
-            <button>&#61;</button>
-            <button>&#43;</button>
+            <button id="operator">.</button>
+            <button id="number">0</button>
+            <button id="equals">&#61;</button>
+            <button id="plus">&#43;</button>
           </div>
         </div>
       </div>
