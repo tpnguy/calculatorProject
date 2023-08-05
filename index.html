@@ -4,52 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    
-    <link rel="stylesheet" href="calculator.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Mono:wght@500&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="calculator.css">
     <script src="calculator.js" defer></script>
   </head>
   <body>
-    
     <div class="calculator">
       <div class="calccontainer">
         <div class="outputcontainer">
-          <div class="outputTop"></div>
-          <div class="outputBottom">4</div>
+          <div class="outputTop" id="previousEquation"></div>
+          <div class="outputBottom" id="display"></div>
         </div>
         <div class="numbers">
           <div class="topButtons">
-            <button id="clear">CLEAR</button>
-            <button id="delete">DELETE</button>
+            <button onclick="clearDisplay()" id="clear">CLEAR</button>
+            <button onclick="backSpace()" id="delete">DELETE</button>
           </div>
           <div class="topRow">
-            <button id="number">7</button>
-            <button id="number">8</button>
-            <button id="number">9</button>
-            <button id="divide">&#247;</button>
+            <button onclick="appendToDisplay('7')" id="number">7</button>
+            <button onclick="appendToDisplay('8')" id="number">8</button>
+            <button onclick="appendToDisplay('9')" id="number">9</button>
+            <button onclick="appendToDisplay('/')" id="divide">&#247;</button>
           </div>
           <div class="midRow">
-            <button id="number">4</button>
-            <button id="number">5</button>
-            <button id="number">6</button>
-            <button id="multiply">&#215;</button>
+            <button onclick="appendToDisplay('4')" id="number">4</button>
+            <button onclick="appendToDisplay('5')" id="number">5</button>
+            <button onclick="appendToDisplay('6')" id="number">6</button>
+            <button onclick="appendToDisplay('*')" id="multiply">&#215;</button>
           </div>
           <div class="bottomRow">
-            <button id="number">1</button>
-            <button id="number">2</button>
-            <button id="number">3</button>
-            <button id="subtract">&#8722;</button>
+            <button onclick="appendToDisplay('1')" id="number">1</button>
+            <button onclick="appendToDisplay('2')" id="number">2</button>
+            <button onclick="appendToDisplay('3')" id="number">3</button>
+            <button onclick="appendToDisplay('-')" id="subtract">
+              &#8722;
+            </button>
           </div>
           <div class="lowestRow">
-            <button id="operator">.</button>
-            <button id="number">0</button>
-            <button id="equals">&#61;</button>
-            <button id="plus">&#43;</button>
+            <button onclick="appendToDisplay('.')" id="operator">.</button>
+            <button onclick="appendToDisplay('0')" id="number">0</button>
+            <button onclick="calculate()" id="equals">&#61;</button>
+            <button onclick="appendToDisplay('+')" id="plus">&#43;</button>
           </div>
         </div>
       </div>
